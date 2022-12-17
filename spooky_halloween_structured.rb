@@ -228,7 +228,7 @@ class GameWindow < Gosu::Window
 
         if @player.dead 
             game_over()
-            @death_sound.play()
+            @death_sound.play(volume = 0.5)
         end
     end
     
@@ -276,7 +276,7 @@ class GameWindow < Gosu::Window
             # Push bullet for render
             @bullets << bullet
             @player.ammo -= 1
-            @shoot_sound.play
+            @shoot_sound.play(volume = 0.1)
         end
     end
 
@@ -536,14 +536,14 @@ class GameWindow < Gosu::Window
         @schedulers << scheduler
     end
 
+    # Execute scheduled events
     def scheduler_check()
-        current = Gosu.milliseconds
-        @schedulers.length.times do |i|
-            scheduler = @schedulers[i]
-            return if scheduler == nil
-            if(current >= scheduler.time)
-                scheduler.proc.call()
-                @schedulers.delete(scheduler)
+        @schedulers.delete_if do |scheduler|
+            if scheduler.time <= Gosu.milliseconds
+                scheduler.proc.call
+                true
+            else
+                false
             end
         end
     end

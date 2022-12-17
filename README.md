@@ -51,3 +51,12 @@ The game uses images and fonts for its graphics and UI. The images and fonts are
 ![alt text](/attachments/1.png)
 
 ![alt text](/attachments/2.png)
+## Credits
+
+- Squares font by Neon22
+- Halloweenpixels font by pizzadude
+- Menu background image by PNG Fuel
+- Game background image by Free PNGs
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
