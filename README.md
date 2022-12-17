@@ -3,8 +3,9 @@
 A simple 2D zombie survival game written in Ruby using the Gosu library. Players must survive waves of zombies and pick up items such as ammo and health to help them survive. The game is over when the player's health runs out.
 ## Requirements
 
-    Ruby
-    Gosu (gem install gosu)
+- Ruby
+- Gosu `(gem install gosu)`
+- Halloweenpixels & Squares font (included in `attachments` directory)
 
 ## Running the game
 
@@ -47,6 +48,6 @@ The `GameWindow` class is the main class for the game and is responsible for han
 
 The game uses images and fonts for its graphics and UI. The images and fonts are stored in the media directory.
 
-![alt text](/1.png)
+![alt text](/attachments/1.png)
 
-![alt text](/2.png)
+![alt text](/attachments/2.png)
